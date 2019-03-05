@@ -14,12 +14,12 @@
     return o;
   }
   // 自定义一个倒计时功能
-  function CountDown (opt) {
+  function CountBack (opt) {
     this.opt = opt;
     this._init(opt);
   }
 
-  CountDown.prototype = {
+  CountBack.prototype = {
     constuctor: this,
     _init: function (opt) {
       // 默认参数
@@ -35,13 +35,13 @@
       this.target.innerText = this.def.btnDefText;
     },
     getTarget: function (domId) {
-      if (!domId) throw new Error('CountDown: ', 'domId must not be empty!!');
+      if (!domId) throw new Error('CountBack: ', 'domId must not be empty!!');
       var targetDom = document.getElementById(domId);
-      if (!targetDom) throw new Error('CountDown: ', 'Target with domId is null!!');
+      if (!targetDom) throw new Error('CountBack: ', 'Target with domId is null!!');
       return targetDom;
     },
     start: function () {
-      console.log('CountDown: start....');
+      console.log('CountBack: start....');
       var time = this.def.time;
       var _this = this;
       this.interval = setInterval(function () {
@@ -56,7 +56,7 @@
       }, 1000);
     },
     stop: function () {
-      console.log('CountDown: stop....');
+      console.log('CountBack: stop....');
       clearInterval(this.interval);
       this.interval = null;
       this.def.time = this.opt.time || DEFAULT_TIME;
@@ -67,10 +67,10 @@
   // 插件暴露给全局对象
   _global = (function () { return this || (0, eval)('this')}());
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = CountDown;
+    module.exports = CountBack;
   } else if (typeof define === 'function' && define.amd) {
-    define(function () { return CountDown });
+    define(function () { return CountBack });
   } else {
-    !('CountDown' in _global) && (_global.CountDown = CountDown);
+    !('CountBack' in _global) && (_global.CountBack = CountBack);
   }
 }())

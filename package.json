@@ -1,11 +1,19 @@
 {
-  "name": "countdown",
+  "name": "countback",
   "version": "1.0.0",
-  "description": "",
-  "main": "countdown.js",
+  "description": "注册时 发送验证码",
+  "main": "countback.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backgroundColor/countback.git"
+  },
   "author": "backgroundcolor",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/backgroundColor/countback/issues"
+  },
+  "homepage": "https://github.com/backgroundColor/countback#readme"
 }
