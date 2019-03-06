@@ -44,6 +44,7 @@
       console.log('CountBack: start....');
       var time = this.def.time;
       var _this = this;
+      this.target.disabled = true;
       this.interval = setInterval(function () {
         time--;
         console.log(time);
@@ -61,6 +62,7 @@
       this.interval = null;
       this.def.time = this.opt.time || DEFAULT_TIME;
       this.target.innerText = this.def.btnFinishedText;
+      this.target.disabled = false;
     }
   }
 
