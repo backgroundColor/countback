@@ -1,6 +1,6 @@
 {
   "name": "countback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "注册时 发送验证码",
   "main": "countback.js",
   "scripts": {
