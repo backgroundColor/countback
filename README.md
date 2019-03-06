@@ -4,6 +4,12 @@
 ## API
 
 ```
+ // 安装
+ npm i countback
+
+```
+
+```
  /*
   * domId 目标button的id（必填）
   * btnDefText 目标button的默认显示（选填，默认值：获取验证码）
