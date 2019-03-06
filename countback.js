@@ -47,7 +47,6 @@
       this.target.disabled = true;
       this.interval = setInterval(function () {
         time--;
-        console.log(time);
         if (time < 1) {
           _this.stop();
           return;
